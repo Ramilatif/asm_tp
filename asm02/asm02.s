@@ -30,7 +30,7 @@ _start:
     cmp     byte [rel buf + 0], '4'
     jne     .exit
     cmp     byte [rel buf + 1], '2'
-    jne     .exit
+    jne     .exit1
     jmp     .win
 
 .check3:
@@ -39,7 +39,7 @@ _start:
     cmp     byte [rel buf + 1], '2'
     jne     .exit
     cmp     byte [rel buf + 2], 10        ; '\n'
-    jne     .exit
+    jne     .exit1
     jmp     .win
 
 .win:
@@ -56,3 +56,7 @@ _start:
     mov     rdi, 0
     syscall
 
+.exit1: 
+    mov     rax, SYS_exit
+    mov     rdi, 1
+    syscall
