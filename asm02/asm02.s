@@ -24,7 +24,7 @@ _start:
     je      .check2
     cmp     rax, 3
     je      .check3
-    jmp     .exit
+    jmp     .exit1
 
 .check2:
     cmp     byte [rel buf + 0], '4'
