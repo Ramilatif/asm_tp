@@ -28,16 +28,16 @@ _start:
 
 .check2:
     cmp     byte [rel buf + 0], '4'
-    jne     .exit
+    jne     .exit1
     cmp     byte [rel buf + 1], '2'
     jne     .exit1
     jmp     .win
 
 .check3:
     cmp     byte [rel buf + 0], '4'
-    jne     .exit
+    jne     .exit1
     cmp     byte [rel buf + 1], '2'
-    jne     .exit
+    jne     .exit1
     cmp     byte [rel buf + 2], 10        ; '\n'
     jne     .exit1
     jmp     .win
