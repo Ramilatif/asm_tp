@@ -11,8 +11,7 @@ _start:
         
         mov     rax, [rbx]
         cmp     rax, 2
-        jne     .exit
-        jl      .exit1
+        jne     .exit1
 
         
         mov     rsi, [rbx + 16]
